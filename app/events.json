@@ -1,0 +1,18 @@
+[
+    {
+        "model": "artists.artist",
+        "pk": 1,
+        "fields": {
+            "name": "Saint Jhn",
+            "genre": "Rap"
+        }
+    },
+    {
+        "model": "artists.artist",
+        "pk": 2,
+        "fields": {
+            "name": "Rage Against The Machine",
+            "genre": "Rock"
+        }
+    }
+]
