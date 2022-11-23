@@ -1,11 +1,4 @@
 
-I build this as a monoltih app as a Django project
-
-there are two apps
-
-- website (website frontend)
-- api (backend of the application and rest framework)
-
 ## Development
 
 ```
@@ -16,25 +9,25 @@ docker-compose up -d --build
 ### Load Fixtures
 
 ```
-docker-compose exec budgets python manage.py loaddata budgets.json
+docker-compose exec events python manage.py loaddata events.json
 ```
 
 
 ### Run Tests
 
 ```
-docker-compose exec budgets
+docker-compose exec events
 ```
 #### Run tests with coverage report
 ```
-docker-compose exec budgets pytest -p no:warnings --cov=. --cov-report html
+docker-compose exec events pytest -p no:warnings --cov=. --cov-report html
 ```
 
 ### Code formatting
 ```
-docker-compose exec budgets black --exclude=migrations .
-docker-compose exec budgets isort .
-docker-compose exec budgets flake8 .
+docker-compose exec events black --exclude=migrations .
+docker-compose exec events isort .
+docker-compose exec events flake8 .
 ```
 
 
