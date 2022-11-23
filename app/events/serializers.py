@@ -15,3 +15,6 @@ class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = ('name', 'start', 'end', 'performances')
+
+class EventExportSerializer(serializers.Serializer):
+    webhook = serializers.URLField()
