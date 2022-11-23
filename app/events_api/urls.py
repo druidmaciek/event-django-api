@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from events.views import EventList
+from events.views import EventList, EventDetail
+from performances.views import PerformanceList, PerformanceDetail
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/events/", EventList.as_view()),
-    path("api/events/<pk>/", EventList.as_view()),
+    path("api/events/<pk>/", EventDetail.as_view()),
+    path("api/events/<event_id>/performances/", PerformanceList.as_view()),
+    path("api/events/<event_id>/performances/<pk>/", PerformanceDetail.as_view()),
 ]
