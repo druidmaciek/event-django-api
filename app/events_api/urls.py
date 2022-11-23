@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from drf_yasg import openapi
-from rest_framework import permissions
 from drf_yasg.views import get_schema_view
+from rest_framework import permissions
 
-from events.views import EventList, EventDetail, ExportCSVEvents
-from performances.views import PerformanceList, PerformanceDetail
+from events.views import EventDetail, EventList, ExportCSVEvents
+from performances.views import PerformanceDetail, PerformanceList
+
 schema_view = get_schema_view(
     openapi.Info(
         title="Movies API",
