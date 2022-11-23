@@ -24,7 +24,7 @@ from performances.views import PerformanceDetail, PerformanceList
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Movies API",
+        title="Events API",
         default_version="v1",
     ),
     public=True,
