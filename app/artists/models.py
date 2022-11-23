@@ -8,4 +8,6 @@ class Artist(models.Model):
 
     name = models.CharField(max_length=255, unique=True)
     genre = models.CharField(max_length=4, choices=Genre.choices)
-    
+
+    def __str__(self) -> str:
+        return self.name
