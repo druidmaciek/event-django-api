@@ -22,4 +22,5 @@ from events.views import EventList
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/events/", EventList.as_view()),
+    path("api/events/<pk>/", EventList.as_view()),
 ]
